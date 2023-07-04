@@ -1,7 +1,7 @@
 {
   "name": "unocss-postprocessor-colors",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@8.3.1",
   "description": "",
   "author": "Amihhs <https://github.com/amihhs>",
@@ -44,7 +44,7 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp --commit --push --tag && pnpm publish",
+    "release": "bumpp",
     "lint": "eslint .",
     "test": "vitest",
     "test:update": "vitest -u",
