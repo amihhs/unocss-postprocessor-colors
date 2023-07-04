@@ -1,7 +1,7 @@
 {
   "name": "unocss-postprocessor-colors",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "pnpm@8.3.1",
   "description": "",
   "author": "Amihhs <https://github.com/amihhs>",
