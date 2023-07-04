@@ -1,0 +1,76 @@
+{
+  "name": "unocss-postprocessor-colors",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@8.3.1",
+  "description": "",
+  "author": "Amihhs <https://github.com/amihhs>",
+  "license": "MIT",
+  "homepage": "https://github.com/amihhs/unocss-postprocessor-colors#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amihhs/unocss-postprocessor-colors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amihhs/unocss-postprocessor-colors/issues"
+  },
+  "keywords": [
+    "UnoCSS",
+    "UnoCSS postprocessor"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp --commit --push --tag && pnpm publish",
+    "lint": "eslint .",
+    "test": "vitest",
+    "test:update": "vitest -u",
+    "typecheck": "tcs --noEmit",
+    "play": "npm -C playground run dev"
+  },
+  "dependencies": {
+    "@unocss/core": "^0.51.8"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.38.5",
+    "@babel/types": "^7.21.5",
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "@commitlint/types": "^17.4.4",
+    "@types/node": "^18.16.2",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.39.0",
+    "esno": "^0.16.3",
+    "lint-staged": "^13.2.2",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
+    "vite": "^4.3.3",
+    "vitest": "^0.30.1"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json,yml}": "eslint --fix"
+  }
+}
