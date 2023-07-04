@@ -61,6 +61,9 @@ postprocessorColors({
 
 ```
 
+## Other 
+Thanks to [@zyyv](https://github.com/zyyv) for the solution
+
 ## License
 
 MIT License &copy; 2023-PRESENT [Amihhs](https://github.com/amihhs)
