@@ -29,13 +29,39 @@ export default defineConfig({
 </div>
 ```
 
-Will be transformed to:
+This is similar to:
 
 ```html
 <div class="text-red-5 bg-red-5 bg-opacity-70">
   content
 </div>
 ``` 
+
+This way we can use corresponding colors on other common styles
+
+```html
+<div class="w-20 h-10 rounded-md grid place-items-center bg-blue-5 ripple text-white">
+  button
+</div>
+<div class="w-20 h-10 rounded-md grid place-items-center bg-red-5 ripple text-white">
+  button
+</div>
+```
+
+```css
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: rgba(var(--un-bg-color), 1) radial-gradient(circle, transparent 1%, rgba(var(--un-bg-color), 1) 1%) center/15000%;
+}
+.ripple:active {
+  background-color: rgba(var(--un-bg-color), 0.5);
+  background-size: 100%;
+  transition: background 0s;
+}
+```
 
 ## Options
 
